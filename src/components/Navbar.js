@@ -9,7 +9,30 @@ import { useProductsContext } from '../context/products_context';
 import { useUserContext } from '../context/user_context';
 
 const Nav = () => {
-  return <h4>navbar</h4>;
+  return (
+    <NavContainer>
+      <div className="nav-center">
+        <div className="nav-header">
+          <Link to="/">
+            <img src={logo} alt="Logo" />
+          </Link>
+          <button type="button" className="nav-toggle">
+            <FaBars />
+          </button>
+        </div>
+        <ul className="nav-links">
+          {links.map((link) => {
+            const { id, text, url } = link;
+            return (
+              <li key="id">
+                <Link to={url}>{text}</Link>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    </NavContainer>
+  );
 };
 
 const NavContainer = styled.nav`
@@ -17,6 +40,7 @@ const NavContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--clr-primary-1);
 
   .nav-center {
     width: 90vw;
@@ -28,14 +52,14 @@ const NavContainer = styled.nav`
     align-items: center;
     justify-content: space-between;
     img {
-      width: 175px;
-      margin-left: -15px;
+      width: 70px;
+      margin-left: 5px;
     }
   }
   .nav-toggle {
     background: transparent;
     border: transparent;
-    color: var(--clr-primary-5);
+    color: var(--clr-primary-9);
     cursor: pointer;
     svg {
       font-size: 2rem;
@@ -63,7 +87,7 @@ const NavContainer = styled.nav`
         margin: 0 0.5rem;
       }
       a {
-        color: var(--clr-grey-3);
+        color: var(--clr-primary-9);
         font-size: 1rem;
         text-transform: capitalize;
         letter-spacing: var(--spacing);

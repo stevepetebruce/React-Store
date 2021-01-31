@@ -8,6 +8,8 @@ import { FilterProvider } from './context/filter_context';
 import { CartProvider } from './context/cart_context';
 import { UserProvider } from './context/user_context';
 
+require('dotenv').config();
+
 ReactDOM.render(
   <ProductsProvider>
     <App />

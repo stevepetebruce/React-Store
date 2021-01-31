@@ -6,7 +6,14 @@ import { PageHero, StripeCheckout } from '../components';
 import { useCartContext } from '../context/cart_context';
 
 const CheckoutPage = () => {
-  return <h4>checkout page</h4>;
+  return (
+    <main>
+      <PageHero title="checkout" />
+      <Wrapper className="page">
+        <h4>checkout page</h4>
+      </Wrapper>
+    </main>
+  );
 };
 const Wrapper = styled.div``;
 export default CheckoutPage;

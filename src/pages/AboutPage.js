@@ -3,8 +3,27 @@ import styled from 'styled-components';
 import { PageHero } from '../components';
 import aboutImg from '../assets/hero-bcg.jpeg';
 
-const AboutPage = () => {
-  return <h4>about page</h4>;
+const AboutPage = ({ title }) => {
+  return (
+    <main>
+      <PageHero title="About" />
+      <Wrapper className="page section section-center">
+        <img src={aboutImg} alt="vegetable" />
+        <article>
+          <div className="title">
+            <h2>About</h2>
+            <div className="underline" />
+          </div>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi
+            consequuntur doloribus quaerat nostrum nesciunt architecto, dolor
+            minus debitis tempora rem quae voluptatibus adipisci totam modi
+            quibusdam asperiores molestias perferendis molestiae?
+          </p>
+        </article>
+      </Wrapper>
+    </main>
+  );
 };
 
 const Wrapper = styled.section`

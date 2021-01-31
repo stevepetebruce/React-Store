@@ -17,6 +17,7 @@
     "no-unused-vars": "off",
     "camelcase": [1, {"properties": "always"}],
     "import/prefer-default-export": "off",
+    "react/prop-types": "off",
     "sort-imports": ["error", {
       "ignoreCase": true,
       "ignoreDeclarationSort": true,

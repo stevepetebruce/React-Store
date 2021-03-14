@@ -35,6 +35,10 @@ export const ProductsProvider = ({ children }) => {
     dispatch({ type: SIDEBAR_CLOSE })
   }
 
+  useEffect(()=>{
+    fetchProducts(`${url}`)
+  },[])
+
   const fetchProducts = async(url) => {
     dispatch({ type: GET_PRODUCTS_BEGIN })
     try{

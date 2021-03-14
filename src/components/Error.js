@@ -1,7 +1,9 @@
 import React from 'react';
 
 const Error = () => {
-  return <h4>error element</h4>;
+  return (
+    <div className="section section-center text-center">Error in page...</div>
+  );
 };
 
 export default Error;

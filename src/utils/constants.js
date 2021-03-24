@@ -46,4 +46,4 @@ export const services = [
 
 export const products_url = process.env.REACT_APP_PRODUCTS_URL;
 
-export const single_product_url = `process.env.SINGLE_PRODUCT_URL`;
+export const single_product_url = process.env.REACT_APP_SINGLE_PRODUCT_URL;
